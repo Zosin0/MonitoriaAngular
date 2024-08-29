@@ -1,60 +1,52 @@
-// let idade: number = 18
-// if (idade >= 18) {
-//     alert("Eu sou maior de idade man")
-// } else{
-//     alert("Eu sou menor de idade man")    
-// }
-// Operador Ternário
-// let io: number = 25;
-// let temperatura:string;
-// temperatura = (io >= 30) ? 'Quente!' : 'Frio'
-// alert(temperatura)
-//let inputElement:string = '1';  
-// Seleciona os elementos do DOM
-// const inputElement = document.getElementById('userInput') as HTMLInputElement;
-//const buttonElement = document.getElementById('showInput') as HTMLButtonElement;
-// const outputElement = document.getElementById('output') as HTMLParagraphElement;
-var outputElement = document.getElementById('output');
-var buttonElement = document.getElementById('showInput');
-function clicou() {
-    var idx = 1;
-    var soma = 0;
-    while (soma < 100) {
-        soma += idx;
-        alert("A soma atual \u00E9: ".concat(soma, "\nUltimo n\u00FAmero somado: ").concat(idx));
-        //outputElement.textContent = `A soma atual é: ${soma}\nUltimo número somado ${idx}`;
-        idx += 1;
+var _a, _b, _c;
+function divisibilityCheck() {
+    var outputElement = document.getElementById('output');
+    var result = '';
+    for (var i = 1; i <= 200; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            result += "N\u00FAmero ".concat(i, ": divis\u00EDvel por 3 e 5\n");
+        }
+        else if (i % 3 === 0) {
+            result += "N\u00FAmero ".concat(i, ": divis\u00EDvel por 3\n");
+        }
+        else if (i % 5 === 0) {
+            result += "N\u00FAmero ".concat(i, ": divis\u00EDvel por 5\n");
+        }
+        else {
+            result += "N\u00FAmero ".concat(i, ": ").concat(i, "\n");
+        }
     }
+    outputElement.textContent = result;
 }
-buttonElement.addEventListener('click', clicou);
-//     const dia: string = inputElement.value;
-//     console.log(typeof(dia));
-//     console.log(dia);
-//     switch (dia) {
-//         case '1':
-//             outputElement.textContent = 'Segunda-Feira';
-//             break;
-//         case '2':
-//             outputElement.textContent = 'Terça-Feira';
-//             break;
-//         case '3':
-//             outputElement.textContent = 'Quarta-Feira';
-//             break;
-//         case '4':
-//             outputElement.textContent = 'Quinta-Feira';
-//             break;
-//         case '5':
-//             outputElement.textContent = 'Sexta-Feira';
-//             break;
-//         case '6':
-//             outputElement.textContent = 'Sábado';
-//             break;
-//         case '7':
-//             outputElement.textContent = 'Domingo';
-//             break;
-//         default:
-//             outputElement.textContent = 'Número inválido';
-//     }
-// }
-// // Adiciona um evento de clique ao botão
-// buttonElement.addEventListener('click', clicou);
+function isPrime(num) {
+    for (var i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return num > 1;
+}
+function findPrimes() {
+    var outputElement = document.getElementById('output');
+    var result = 'Números primos: ';
+    for (var i = 1; i <= 50; i++) {
+        if (isPrime(i)) {
+            result += "".concat(i, " ");
+        }
+    }
+    outputElement.textContent = result;
+}
+function sumOddNumbers() {
+    var outputElement = document.getElementById('output');
+    var number = 7;
+    var sum = 0;
+    for (var i = 1; i <= number; i++) {
+        if (i % 2 !== 0) {
+            sum += i;
+        }
+    }
+    outputElement.textContent = "A soma dos n\u00FAmeros \u00EDmpares at\u00E9 ".concat(number, " \u00E9: ").concat(sum);
+}
+(_a = document.getElementById('showDivisibility')) === null || _a === void 0 ? void 0 : _a.addEventListener('click', divisibilityCheck);
+(_b = document.getElementById('showPrimes')) === null || _b === void 0 ? void 0 : _b.addEventListener('click', findPrimes);
+(_c = document.getElementById('showOddSum')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', sumOddNumbers);
