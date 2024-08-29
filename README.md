@@ -1,5 +1,3 @@
 # MonitoriaAngular
-Códigos da Monitoria de Angular
 
-
--- Config
+### Acesse o GitHub Pages e escolha um exercício para visualizar
