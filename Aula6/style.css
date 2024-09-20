@@ -1,0 +1,61 @@
+body{
+    background-color: #E7E2D2;
+}
+
+h1 { font-family: Frutiger; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px;  color: #1BA5ED;}
+
+
+.myButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.botao1 {
+    color: blue;
+    border: 3px solid white;
+    background-color: white;
+    margin-bottom: 33px;
+}
+
+#bt1 {
+    background-color: white;
+    border: 3px solid blue;
+    color: blue;
+    text-decoration: none;
+    width: 90px;
+    height: 45px;
+    border-radius: 5%;
+    transition: 1;
+    cursor: pointer;
+}
+
+#bt1:hover {
+    width: 94px;
+    height: 49px;
+}
+
+
+.botao2 {
+    background-color: #1BA5ED;
+    text-decoration: none;
+    color: white;
+    font-family: "Segoe UI";
+    font-size: medium;
+    border: white;
+    padding: 6px;
+    padding-top: 3px;
+    width: 60px;
+    height: 35px;
+    text-align: center;
+    border-radius: 22px;
+    cursor: pointer;
+    transition: animation 2ms;    
+}
+
+.botao2:hover{
+    width: 63px;
+    height: 38px;
+}
