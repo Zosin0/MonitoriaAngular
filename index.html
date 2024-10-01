@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Aulas de TypeScript / HTML-CSS / ANGULAR</h1>
-    <ol>
-        <li><a href="Aula3/aula3.html">Aula 3 - Introdução ao TypeScript</a></li>
-        <li><a href="Aula4/aula4.html">Aula 4 - Funções em TypeScript</a></li>
-        <li><a href="Aula6/aula6.html">Aula 6 - Botões HTML</a></li>
-        <li><a href="Aula7/index.html">Aula 7 - Site HTML</a></li>
-        <li><a href="Aula6/aula6.html">Aula 8 - Botões com Transition</a></li>
-        <li><a href="Aula8/aula8.html">Aula 8 - Site melhorado</a></li>
-    </ol>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="show-sobre">Sobre</a></li>
+                <li><a href="#" id="show-contato">Contato</a></li>
+            </ul>
+        </nav>
+        <h1>Aulas de TypeScript / HTML-CSS / ANGULAR</h1>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Guia de Aulas</h2>
+            <ol>
+                <li><a href="Aula3/aula3.html">Aula 3 - Introdução ao TypeScript</a></li>
+                <li><a href="Aula4/aula4.html">Aula 4 - Funções em TypeScript</a></li>
+                <li><a href="Aula6/aula6.html">Aula 6 - Botões HTML</a></li>
+                <li><a href="Aula7/index.html">Aula 7 - Site HTML</a></li>
+                <li><a href="Aula6/aula6.html">Aula 8 - Botões com Transition</a></li>
+                <li><a href="Aula8/aula8.html">Aula 8 - Site melhorado</a></li>
+                <li><a href="cara-coroa/index.html">Pedra-Papel-Tesoura</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <section id="sobre" class="card-popup">
+        <div class="card">
+            <button class="close-btn" id="close-sobre">&times;</button>
+            <h2>Sobre</h2>
+            <p>Lucas Zoser</p>
+            <p>8° Semestre</p>
+            <p>Ciência da Computação</p>
+        </div>
+    </section>
+
+    <section id="contato" class="card-popup">
+        <div class="card">
+            <button class="close-btn" id="close-contato">&times;</button>
+            <h2>Contato</h2>
+            <p><a href="https://linkedin.com/in/lucaszoser" target="_blank">LinkedIn</a></p>
+            <p><a href="https://github.com/Zosin0" target="_blank">GitHub</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Monitoria de Angular - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

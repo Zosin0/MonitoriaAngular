@@ -1,0 +1,162 @@
+/* Estrutura Básica */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #e0f7fa;
+    color: #333;
+  }
+  
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttons-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  button {
+    padding: 15px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #00796b;
+    color: white;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+  }
+  
+  .game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .game-board {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 25px;
+  }
+  
+  .tela-mao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tela {
+    width: 140px;
+    height: 90px;
+    background-color: #37474f;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .tela-jogador-vitoria::before,
+  .tela-computador-vitoria::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #37474f;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  
+  /* Animação das Telas */
+  .tela-jogador-vitoria {
+    background-color: #43a047;
+  }
+  
+  .tela-computador-vitoria {
+    background-color: #e53935;
+  }
+  
+  /* Animações para as Mãos */
+  .mao-jogador, .mao-computador {
+    width: 110px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 20px;
+  }
+  
+  .mao-pedra-jogador {
+    background-image: url('assets/pedra.png');
+  }
+  
+  .mao-papel-jogador {
+    background-image: url('assets/papel.png');
+  }
+  
+  .mao-tesoura-jogador {
+    background-image: url('assets/tesoura.png');
+  }
+  
+  .mao-pedra-computador {
+    background-image: url('assets/pedra.png');
+  }
+  
+  .mao-papel-computador {
+    background-image: url('assets/papel.png');
+  }
+  
+  .mao-tesoura-computador {
+    background-image: url('assets/tesoura.png');
+  }
+  
+  /* Animação de Tremor nas Mãos */
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  
+  .shake {
+    animation: shake 1s;
+  }
+  
+  /* Resultado e Status */
+  #resultado {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #00796b;
+  }
+  
+  #status {
+    font-size: 22px;
+    color: #333;
+  }

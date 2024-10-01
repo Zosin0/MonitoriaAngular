@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedra, Papel ou Tesoura</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overlay">
+      <section class="buttons-content">
+        <button id="pedra">Pedra</button>
+        <button id="papel">Papel</button>
+        <button id="tesoura">Tesoura</button>
+      </section>
+
+      <main class="game-area">
+        <section class="game-board">
+          <div class="tela-mao tela-mao-jogador">
+            <div id="tela-jogador" class="tela"></div>
+            <div id="mao-jogador" class="mao-jogador mao-pedra-jogador"></div>
+          </div>
+          <div class="tela-mao tela-mao-computador">
+            <div id="tela-computador" class="tela"></div>
+            <div id="mao-computador" class="mao-computador mao-pedra-computador"></div>
+          </div>
+        </section>
+        <p id="resultado">RESULTADO</p>
+      </main>
+
+      <section class="status-content">
+        <p id="status">Vitórias = 0 Derrotas = 0 Empates = 0</p>
+      </section>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
